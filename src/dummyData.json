@@ -1,0 +1,78 @@
+{
+  "all": {
+    "guro": [
+      {
+        "store_name": "일번식당",
+        "store_address": "서울 구로구 디지털로32길 30 코오롱디지털타워빌란트-1",
+        "store_image": {
+          "1": "https://user-images.githubusercontent.com/66461799/128815117-476f9059-6c42-4392-9b07-e72e4a44f8a9.png",
+          "2": "https://user-images.githubusercontent.com/66461799/128815156-973f92a8-1d76-492b-a912-d42ebab89029.png",
+          "3": "https://user-images.githubusercontent.com/66461799/128815165-f4f6d679-e4fc-42ba-8496-64c6a5c75a27.png",
+          "4": "https://user-images.githubusercontent.com/66461799/128815171-0baca007-a5fb-4175-bc11-566ead234563.png",
+          "5": "https://user-images.githubusercontent.com/66461799/128815152-b75eae17-722d-4cc0-8329-6f04c1054123.png"
+        },
+        "store_menu": [
+          "잡곡밥/백미밥",
+          "매운갈비찜",
+          "비엔나메추리알조림",
+          "매콤김치전",
+          "순두부짬뽕",
+          "유채나물무침",
+          "맛살숙주나물",
+          "포기김치",
+          "그린샐러드&드레싱",
+          "흑임자죽/숭늉"
+        ],
+        "store_service": ["수정과", "토스트", "음료수"],
+        "price": {
+          "one": "4000",
+          "eleven": "40000"
+        },
+        "message": "안녕하세요. 찾아주셔서 감사합니다."
+      },
+      {
+        "store_name": "이번식당",
+        "store_address": "서울 구로구 디지털로32길 30 코오롱디지털타워빌란트-1",
+        "store_image": {
+          "img_1": "https://user-images.githubusercontent.com/66461799/128815117-476f9059-6c42-4392-9b07-e72e4a44f8a9.png",
+          "img_2": "https://user-images.githubusercontent.com/66461799/128815156-973f92a8-1d76-492b-a912-d42ebab89029.png",
+          "img_3": "https://user-images.githubusercontent.com/66461799/128815165-f4f6d679-e4fc-42ba-8496-64c6a5c75a27.png"
+        },
+        "store_menu": [
+          "불주꾸미볶음밥",
+          "수제고구마튀김",
+          "한식잡채",
+          "가지굴소스볶음",
+          "미역국",
+          "겉절이",
+          "포기김치",
+          "그린샐러드/드레싱",
+          "차"
+        ],
+        "store_service": ["라면", "토스트", "음료수", "아이스크림"],
+        "price": {
+          "one": "5000",
+          "eleven": "50000"
+        },
+        "message": "안녕하세요. 찾아주셔서 감사합니다."
+      },
+      {
+        "store_name": "삼번식당",
+        "store_address": "서울 구로구 디지털로32길 30 코오롱디지털타워빌란트-1",
+        "store_image": {
+          "img_1": "https://user-images.githubusercontent.com/66461799/128815117-476f9059-6c42-4392-9b07-e72e4a44f8a9.png",
+          "img_2": "https://user-images.githubusercontent.com/66461799/128815156-973f92a8-1d76-492b-a912-d42ebab89029.png",
+          "img_3": "https://user-images.githubusercontent.com/66461799/128815165-f4f6d679-e4fc-42ba-8496-64c6a5c75a27.png",
+          "img_4": "https://user-images.githubusercontent.com/66461799/128815171-0baca007-a5fb-4175-bc11-566ead234563.png"
+        },
+        "store_menu": ["흰밥", "돈까스", "오징어볶음", "미역국", "김치찌개"],
+        "store_service": ["라면", "토스트"],
+        "price": {
+          "one": "5000",
+          "eleven": "50000"
+        },
+        "message": "안녕하세요. 찾아주셔서 감사합니다. 또 오세요. 자주 오세요. 계속 오세요."
+      }
+    ]
+  }
+}
