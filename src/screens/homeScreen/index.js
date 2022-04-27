@@ -10,9 +10,8 @@ import {
   TouchableOpacity,
   Platform,
 } from 'react-native';
-import styles from './style';
+import styles from './styles';
 import data from '../../dummyData.json';
-import style from './style';
 import MenuList from '../../components/menuList';
 import BottomSheet from '../../components/bottomSheet';
 
@@ -53,8 +52,19 @@ function HomeScreen({navigation}) {
     }
   }
 
+  useEffect(() => {
+    // App.js -> 디바이스 정보 저장
+    // 서버에서 설문 조사 유무 받아와서 팝업창 생성
+  });
+
   const renderItem = ({item, index}) => {
+    const menu = item.store_menu;
+    // 메뉴 12개까지만 보여주기
+    const sliceMenu = menu.length > 9 ? menu.slice(0, 9) : menu;
+
     const service = item.store_service;
+    // 편의시설 및 서비스 3개까지만 보여주기
+    const sliceService = service.length > 3 ? service.slice(0, 3) : service;
 
     return (
       <View
@@ -75,33 +85,41 @@ function HomeScreen({navigation}) {
                 source={{
                   uri: 'https://user-images.githubusercontent.com/66461799/128815117-476f9059-6c42-4392-9b07-e72e4a44f8a9.png',
                 }}
-                style={style.info_img}
+                style={styles.info_img}
                 imageStyle={{borderTopLeftRadius: 20, borderTopRightRadius: 20}}
               />
               <View
                 style={
-                  isPress === false ? style.info_list : style.info_list_clicked
+                  isPress === false
+                    ? styles.info_list
+                    : styles.info_list_clicked
                 }>
-                <View style={style.list_store_name}>
+                <View style={styles.list_store_name}>
                   <Text
                     style={{fontSize: 21, fontWeight: 'bold', color: 'black'}}>
                     {item.store_name}
                   </Text>
                 </View>
-                <View style={style.list_menu}>
-                  <Text
-                    style={{
-                      fontSize: 16,
-                      color: '#EF4444',
-                      marginBottom: height * 0.009,
-                    }}>
-                    오늘의 메뉴
-                  </Text>
+                <View style={styles.list_menu}>
+                  <View style={{flexDirection: 'row'}}>
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        color: '#EF4444',
+                        marginBottom: height * 0.009,
+                      }}>
+                      오늘의 메뉴
+                    </Text>
+                    <Image
+                      style={{width: 20, height: 20}}
+                      source={require('../../assets/icons/drawable-hdpi/food.png')}
+                    />
+                  </View>
                   <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-                    <MenuList menu={item.store_menu} />
+                    <MenuList menu={sliceMenu} />
                   </View>
                 </View>
-                <View style={style.list_other}>
+                <View style={styles.list_other}>
                   {/* <Text style={{fontSize: 10, color: '#292929'}}> */}
                   {/* {item.store_service} */}
                   <View style={{flexDirection: 'row'}}>
@@ -115,7 +133,7 @@ function HomeScreen({navigation}) {
                         return '#' + v;
                       })}
                     </Text> */}
-                    {service.map((value, index) => {
+                    {sliceService.map((value, index) => {
                       return (
                         <Text
                           key={index}
@@ -163,13 +181,13 @@ function HomeScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.location}>
-        <Text style={style.location_title}>현재위치</Text>
-        <View style={style.location_contents}>
+        <Text style={styles.location_title}>현재위치</Text>
+        <View style={styles.location_contents}>
           <Image
             style={{width: 20, height: 20}}
             source={require('../../assets/icons/drawable-hdpi/location18.png')}
           />
-          <Text style={style.location_content_name}>구로구</Text>
+          <Text style={styles.location_content_name}>구로구</Text>
           <TouchableOpacity onPress={() => onPress()}>
             <Image
               style={{width: 20, height: 20}}

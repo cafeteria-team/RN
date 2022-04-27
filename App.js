@@ -12,7 +12,7 @@
 
 import * as React from 'react';
 import {SafeAreaView} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import TabNavigator from './src/routers/tabNavigator';
 import StackNavigator from './src/routers/stackNavigator';
 import DeviceInfo from 'react-native-device-info';
@@ -22,10 +22,22 @@ import DeviceInfo from 'react-native-device-info';
 
 function App() {
   const uniqueId = DeviceInfo.getUniqueId();
-  // console.log(uniqueId);
+  console.log('DeviceInfo :', uniqueId);
+
+  const MyTheme = {
+    colors: {
+      ...DefaultTheme.colors,
+      // primary: 'rgb(255, 45, 85)',
+      background: '#FFFFFF',
+      // card: 'rgb(255, 255, 255)',
+      // text: '#292929',
+      // border: 'rgb(199, 199, 204)',
+      // notification: 'rgb(255, 69, 58)',
+    },
+  };
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={MyTheme}>
       <SafeAreaView style={{flex: 1}}>
         <StackNavigator />
       </SafeAreaView>

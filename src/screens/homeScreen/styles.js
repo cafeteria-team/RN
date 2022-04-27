@@ -76,7 +76,7 @@ export default StyleSheet.create({
     marginBottom: height * 0.013,
   },
   list_menu: {
-    height: height * 0.22,
+    height: height * 0.2,
     borderRadius: 8,
     paddingVertical: height * 0.017,
     paddingHorizontal: width * 0.044,

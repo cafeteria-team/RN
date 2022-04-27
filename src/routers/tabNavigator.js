@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ImageBackground, Text, Platform, Dimensions} from 'react-native';
+import {View, Image, Text, Platform, Dimensions} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   HomeStackScreen,
@@ -48,7 +48,7 @@ function TabStackScreen() {
                   android: 0,
                 }),
               }}>
-              <ImageBackground
+              <Image
                 source={
                   focused
                     ? require('../assets/icons/drawable-hdpi/house-color.png')
@@ -89,7 +89,7 @@ function TabStackScreen() {
                   android: 0,
                 }),
               }}>
-              <ImageBackground
+              <Image
                 source={
                   focused
                     ? require('../assets/icons/drawable-hdpi/like-color.png')
@@ -130,7 +130,7 @@ function TabStackScreen() {
                   android: 0,
                 }),
               }}>
-              <ImageBackground
+              <Image
                 source={
                   focused
                     ? require('../assets/icons/drawable-hdpi/category-color.png')

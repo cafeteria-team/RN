@@ -19,6 +19,7 @@ export default StyleSheet.create({
     borderColor: 'black',
     borderStyle: 'dashed',
     zIndex: 0,
+    marginVertical: 20,
   },
   dash_line_children: {
     position: 'absolute',
@@ -30,22 +31,68 @@ export default StyleSheet.create({
     zIndex: 1,
   },
   store_info_box: {},
-  store_name: {},
-  store_lcation: {},
-  store_menu: {},
-  store_menu_title: {},
-  store_menu_list: {},
+  store_name: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 16,
+    color: 'black',
+  },
+  store_lcation: {
+    flexDirection: 'row',
+  },
+  store_menu: {
+    // height: height * 0.22,
+    borderRadius: 8,
+    paddingVertical: height * 0.017,
+    paddingHorizontal: width * 0.044,
+    backgroundColor: '#FAFAFA',
+    marginBottom: height * 0.02,
+    marginTop: 20,
+  },
+  store_menu_title: {
+    flexDirection: 'row',
+  },
+  store_menu_list: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
   store_service_box: {},
-  store_service_title: {},
-  store_service_list: {},
+  store_service_title: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+  store_service_list: {
+    flexDirection: 'row',
+  },
+  store_map_title_item: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 60,
+  },
   store_price_box: {},
-  store_price_title: {},
+  store_price_title: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
   store_price_list: {},
-  store_notice_box: {},
-  store_notice_title: {},
+  store_price_list_type: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  store_notice_box: {
+    marginBottom: 20,
+  },
+  store_notice_title: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
   store_notice_comment: {},
   store_map_box: {},
-  store_map_title: {},
+  store_map_title: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
   store_map_image: {},
   store_map_location: {},
   info_img: {

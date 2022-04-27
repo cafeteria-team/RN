@@ -3,6 +3,7 @@ import {Text} from 'react-native';
 
 export default function MenuList(props) {
   const menu = props.menu;
+
   return menu.map((item, index) =>
     index < 12 ? (
       index !== 0 ? (
